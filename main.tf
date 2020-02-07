@@ -21,6 +21,7 @@ resource "google_compute_instance" "this" {
     subnetwork = var.subnetwork
   }
 
+  tags = var.tags
 
   labels = {
     environment = terraform.workspace
