@@ -37,4 +37,13 @@ variable "access_config_network_tier" {
   default     = "STANDARD"
 }
 
+variable "tags" {
+  type        = list(string)
+  description = "Quais tags serão utilizadas"
+}
 
+variable "allow_stopping_for_update" {
+  type        = bool
+  description = "Permite parar a VM para poder escalar verticalmente sua instância"
+  default     = true
+}
