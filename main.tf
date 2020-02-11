@@ -1,5 +1,5 @@
 resource "google_compute_instance" "this" {
-  count = terraform.workspace == "prd" ? 2 : 1
+  count = terraform.workspace == "prd" ? 3 : 2
 
   name = format("%s-%s-%d", terraform.workspace, var.name, count.index)
 
